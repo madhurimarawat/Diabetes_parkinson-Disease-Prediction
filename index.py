@@ -11,7 +11,7 @@ with SavReader(sav_file_path_diabetes) as reader:
     # Read the data
     diabetes_model = reader.all()
 
-sav_file_path_parkinson = Trained_Model/Parkinsons_Model.sav'
+sav_file_path_parkinson = 'Trained_Model/Parkinsons_Model.sav'
 
 #parkinsons_model = pickle.load(
 #   open('Trained_Model/Parkinsons_Model.sav', 'rb'))
