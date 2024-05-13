@@ -1,4 +1,4 @@
-import pickle
+import pickle-mixin
 import streamlit as st
 
 
