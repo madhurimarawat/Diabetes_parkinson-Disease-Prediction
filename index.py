@@ -1,10 +1,15 @@
 import pickle
 import streamlit as st
-
+from savReaderWriter import SavReader
 
 # loading the saved models
+sav_file_path = 'Trained_Model/Diabetes_Model.sav'
+# diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
 
-diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
+# Open the .sav file
+with SavReader(sav_file_path) as reader:
+    # Read the data
+    diabetes_model = reader.all()
 
 parkinsons_model = pickle.load(
     open('Trained_Model/Parkinsons_Model.sav', 'rb'))
