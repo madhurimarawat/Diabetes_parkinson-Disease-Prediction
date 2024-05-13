@@ -1,25 +1,13 @@
 import pickle
 import streamlit as st
-from savReaderWriter import SavReader
+
 
 # loading the saved models
-sav_file_path_diabetes = 'Trained_Model/Diabetes_Model.sav'
-# diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
 
-# Open the .sav file
-with SavReader(sav_file_path_diabetes) as reader:
-    # Read the data
-    diabetes_model = reader.all()
+diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
 
-sav_file_path_parkinson = 'Trained_Model/Parkinsons_Model.sav'
-
-#parkinsons_model = pickle.load(
-#   open('Trained_Model/Parkinsons_Model.sav', 'rb'))
-
-# Open the .sav file
-with SavReader(sav_file_path_diabetes) as reader:
-    # Read the data
-    parkinsons_model = reader.all()
+parkinsons_model = pickle.load(
+    open('Trained_Model/Parkinsons_Model.sav', 'rb'))
 
 
 selected = st.sidebar.selectbox(
