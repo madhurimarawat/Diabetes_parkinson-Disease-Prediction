@@ -7,13 +7,15 @@ import pyreadstat
 # loading the saved models
 
 # diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
-
-diabetes_model = pd.read_spss('Trained_Model/Diabetes_Model.sav')
+try:
+  diabetes_model = pd.read_spss('Trained_Model/Diabetes_Model.sav')
+except Exception as e:
+  st.write(e)
 
 # parkinsons_model = pickle.load(
   #  open('Trained_Model/Parkinsons_Model.sav', 'rb'))
 
-parkinsons_model = pd.read_spss('Trained_Model/Parkinsons_Model.sav')
+#parkinsons_model = pd.read_spss('Trained_Model/Parkinsons_Model.sav')
 
 selected = st.sidebar.selectbox(
     'Diabetes and Parkinsons Prediction System',
