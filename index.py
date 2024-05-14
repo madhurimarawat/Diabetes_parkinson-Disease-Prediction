@@ -1,8 +1,6 @@
 import pickle
 import streamlit as st
 import pandas as pd
-import pyreadstat
-from joblib import load
 
 # Load the model
 # diabetes_model = load('Trained_Model/Diabetes_Model.sav')
@@ -17,7 +15,7 @@ from joblib import load
 try:
   # diabetes_model = pd.read_spss('Trained_Model/Diabetes_Model.sav')
   #diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
-  diabetes_model = load('Trained_Model/Diabetes_Model.sav')
+  diabetes_model = pd.read_pickle('Trained_Model/Diabetes_Model.pkl')
 except Exception as e:
   st.write(e)
 
