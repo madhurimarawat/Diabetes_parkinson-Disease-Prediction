@@ -1,14 +1,18 @@
 import pickle
 import streamlit as st
+import pandas as pd
 
 
 # loading the saved models
 
-diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
+# diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
 
-parkinsons_model = pickle.load(
-    open('Trained_Model/Parkinsons_Model.sav', 'rb'))
+diabetes_model = pd.read_spss('Trained_Model/Diabetes_Model.sav')
 
+# parkinsons_model = pickle.load(
+  #  open('Trained_Model/Parkinsons_Model.sav', 'rb'))
+
+parkinsons_model = pd.read_spss('Trained_Model/Parkinsons_Model.sav')
 
 selected = st.sidebar.selectbox(
     'Diabetes and Parkinsons Prediction System',
