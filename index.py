@@ -8,7 +8,8 @@ import pyreadstat
 
 # diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
 try:
-  diabetes_model = pd.read_spss('Trained_Model/Diabetes_Model.sav')
+  # diabetes_model = pd.read_spss('Trained_Model/Diabetes_Model.sav')
+  diabetes_model = pickle.load(open('Trained_Model/Diabetes_Model.sav', 'rb'))
 except Exception as e:
   st.write(e)
 
