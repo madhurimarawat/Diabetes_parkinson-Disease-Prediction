@@ -1,6 +1,7 @@
 import pickle
 import streamlit as st
 import pandas as pd
+import pyreadstat
 
 
 # loading the saved models
